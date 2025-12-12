@@ -1,0 +1,56 @@
+= msad-query - Microsoft Active Directory Query
+
+Simple wrapper to perform Windows Powershell-based AD User Querys
+
+== Installation
+
+=== Prerequisites
+
+Active Directory Powershell feature. This can be installed from within Powershell with the following command:
+[source,powershell]
+----
+    Install-WindowsFeature -Name "RSAT-AD-PowerShell" -IncludeAllSubFeature
+----
+
+=== Cloning For Development
+
+Set up a virtual environment. Once an environment is set up, activate it and add dependencies with the following:
+[source,bash]
+----
+    pip install -r requirements/dev.txt
+----
+
+The dev.txt file includes:
+
+* BLACK, a code formatter, see notes at the bottom of this file for details
+* setuptools, which provides the support for the building of the package
+
+To run tests:
+[source,bash]
+----
+    python -m unittest discover -s tests/
+----
+
+=== Code Formatting
+
+Code formatting is done using BLACK. BLACK allows almost no customization to how code is formatted with the exception of line length, which has been set to 119 characters.
+<p>Use the following to bulk format files:
+
+[source,bash]
+----
+    black . -l 119
+----
+
+=== Creating A New Release
+
+Please do the following when making a new release, most are documented above:
+
+1. Run tests
+2. Code format
+3. Be sure to update the change log and _metadata.json with version and notes
+4. git add, commit, and push changes
+5. run the following code to generate a wheel:
+[source,bash]
+----
+    python -m build
+----

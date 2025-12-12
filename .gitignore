@@ -1,0 +1,12 @@
+# python artifacts
+false/
+build/
+dist/
+venv/
+env/
+*.egg-info
+*.pyc
+__pycache__/
+
+# general artifacts
+wkdir/

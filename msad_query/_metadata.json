@@ -1,0 +1,21 @@
+
+{
+    "name": "msad-query",
+    "version": "1.0.0",
+    "author": "Joe Marchionna",
+    "author_email": "joemarchionna@gmail.com",
+    "description": "Simple Powershell Wrapper that Queries MS Active Directory for Users",
+    "requirements": "requirements/prod.txt",
+    "url": "https://github.com/joemarchionna/msad-query",
+    "packageData":
+    {
+        "msad-query": [
+            "*.json", "reference/*.cfg"
+        ]
+    },
+    "classifiers": [
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+        "Intended Audience :: Developers"
+    ]
+}

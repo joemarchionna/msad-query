@@ -1,0 +1,2 @@
+class MSADQueryException(Exception):
+    pass
