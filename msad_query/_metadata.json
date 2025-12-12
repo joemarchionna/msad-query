@@ -9,8 +9,8 @@
     "url": "https://github.com/joemarchionna/msad-query",
     "packageData":
     {
-        "msad-query": [
-            "*.json", "reference/*.cfg"
+        "msad_query": [
+            "*.json"
         ]
     },
     "classifiers": [

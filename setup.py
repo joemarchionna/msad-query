@@ -11,7 +11,7 @@ setup(
     author_email=_metadata["author_email"],
     description=_metadata["description"],
     long_description=open("readme.asciidoc").read(),
-    license=open("license.md").read(),
+    license=open("license.asciidoc").read(),
     package_data=_metadata["packageData"],
     include_package_data=True,
     packages=setuptools.find_packages(),
