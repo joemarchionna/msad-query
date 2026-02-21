@@ -29,6 +29,8 @@ jobs:
         run: |
           sed -i -e "s/.asciidoc/.rst/g" setup.py
           sed -i -e "s/.asciidoc/.rst/g" manifest.in
+      - name: copy manifest to SOURCES
+        run: cp manifest.in SOURCES.txt
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
