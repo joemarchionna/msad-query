@@ -22,6 +22,8 @@ jobs:
           asciidoctor changes.asciidoc -o changes.rst
           asciidoctor license.asciidoc -o license.rst
           asciidoctor readme.asciidoc -o readme.rst
+      - name: Replace asciidoc references with rst
+        run: sed -i -e "s/.asciidoc/$1/g" setup.py
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
