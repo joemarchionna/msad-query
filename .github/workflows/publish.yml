@@ -19,9 +19,9 @@ jobs:
         run: sudo apt-get install asciidoctor
       - name: Convert asciidoc(s) to rst(s)
         run: |
-          asciidoctor -b docbook changes.asciidoc && pandoc -f docbook -t rst changes.xml -o changes.rst
-          asciidoctor -b docbook license.asciidoc && pandoc -f docbook -t rst license.xml -o license.rst
-          asciidoctor -b docbook readme.asciidoc && pandoc -f docbook -t rst readme.xml -o readme.rst
+          asciidoctor changes.asciidoc -o changes.rst
+          asciidoctor license.asciidoc -o license.rst
+          asciidoctor readme.asciidoc -o readme.rst
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
