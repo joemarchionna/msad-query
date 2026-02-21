@@ -1,5 +1,4 @@
 include *.asciidoc
 include requirements/*.txt
-recursive-include msad-query/*.asciidoc
-recursive-include msad-query/*.json
-prune tests
+recursive-include msad-query/ *.asciidoc *.json
+prune tests/
