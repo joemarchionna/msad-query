@@ -30,6 +30,7 @@ jobs:
           sed -i -e "s/readme.asciidoc/README.rst/g" setup.py
           sed -i -e "s/license.asciidoc/LICENSE.rst/g" setup.py
           sed -i -e "s/.asciidoc/.rst/g" manifest.in
+          mv manifest.in MANIFEST.in
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
