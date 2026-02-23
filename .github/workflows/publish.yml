@@ -18,8 +18,8 @@ jobs:
         working-directory: ./
     steps:
       - uses: actions/checkout@v4
-      - name: Capitalize manifest filename
-          mv manifest.in MANIFEST.in
+      - name: capitalize manifest filename
+        run: mv manifest.in MANIFEST.in
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
