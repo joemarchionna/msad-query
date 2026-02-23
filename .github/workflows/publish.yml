@@ -18,18 +18,7 @@ jobs:
         working-directory: ./
     steps:
       - uses: actions/checkout@v4
-      - name: Install Asciidoctor
-        run: sudo apt-get install asciidoctor
-      - name: Convert asciidoc(s) to rst(s)
-        run: |
-          asciidoctor changes.asciidoc -o CHANGES.rst
-          asciidoctor license.asciidoc -o LICENSE.rst
-          asciidoctor readme.asciidoc -o README.rst
-      - name: Replace asciidoc references with rst
-        run: |
-          sed -i -e "s/readme.asciidoc/README.rst/g" setup.py
-          sed -i -e "s/license.asciidoc/LICENSE.rst/g" setup.py
-          sed -i -e "s/.asciidoc/.rst/g" manifest.in
+      - name: Capitalize manifest filename
           mv manifest.in MANIFEST.in
       - name: Set up Python
         uses: actions/setup-python@v4
