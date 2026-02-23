@@ -1,5 +1,5 @@
-import setuptools, json
-from setuptools import setup
+from setuptools import setup,find_packages
+import json
 
 # This file should not be edited when changing versions, edit the package metadata file
 _metadata = json.load(open("msad_query/_metadata.json", "r"))
@@ -14,7 +14,7 @@ setup(
     license=open("license.asciidoc").read(),
     package_data=_metadata["packageData"],
     include_package_data=True,
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     url=_metadata["url"],
     install_requires=open(_metadata["requirements"], "r").read().splitlines(),
     classifiers=_metadata["classifiers"],
