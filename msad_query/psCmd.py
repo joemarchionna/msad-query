@@ -3,6 +3,15 @@ import subprocess
 
 
 def runPS(command: str) -> Tuple[bool, str]:
+    """
+    Runs A Powershell Command
+
+    Args:
+        command (str): The Literal Command Line Text To Call
+
+    Returns:
+        tuple[bool, str]: Resulting Success, Message Tuple (True, \<stdout\>) On Success, (False, \<stderr\>) On Failure
+    """
     try:
         # Use 'pwsh' for PowerShell Core or 'powershell.exe' for Windows PowerShell
         # -NoProfile prevents loading the user profile, making execution faster

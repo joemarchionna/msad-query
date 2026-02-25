@@ -1,4 +1,4 @@
-from setuptools import setup,find_packages
+from setuptools import setup, find_packages
 import json
 
 # This file should not be edited when changing versions, edit the package metadata file

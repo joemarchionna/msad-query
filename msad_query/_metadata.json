@@ -1,7 +1,7 @@
 
 {
     "name": "msad-query",
-    "version": "1.0.15",
+    "version": "1.1.0",
     "author": "Joe Marchionna",
     "author_email": "joemarchionna@gmail.com",
     "description": "Simple Powershell Wrapper that Queries MS Active Directory for Users",

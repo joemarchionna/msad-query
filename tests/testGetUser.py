@@ -9,9 +9,7 @@ PARAMETERS = loadUnittestParameters()
 
 class TestGetUser(TestCase):
     def test_a_usr(self):
-        user = getUser(
-            PARAMETERS.get("domainUser", getpass.getuser()), PARAMETERS.get("domainController", "localhost")
-        )
+        user = getUser(PARAMETERS.get("domainUser", getpass.getuser()), PARAMETERS.get("domainController", "localhost"))
         self.assertIsInstance(user, dict)
         self.assertTrue(MSAD_USER_FIELDS.GUID in user)
 
@@ -20,6 +18,4 @@ class TestGetUser(TestCase):
         self.assertFalse(user)
 
     def test_c_fail(self):
-        self.assertRaises(
-            MSADQueryException, getUser, "sjaqp887408cvd", PARAMETERS.get("domainController", "localhost")
-        )
+        self.assertRaises(MSADQueryException, getUser, "sjaqp887408cvd", PARAMETERS.get("domainController", "localhost"))

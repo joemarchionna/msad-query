@@ -14,6 +14,12 @@ class RECORD_FIELDS(object):
 def parseRecord(resultTxt: str) -> dict:
     """
     returns a dict from multi-line text
+
+    Args:
+        resultTxt (str): powershell record text
+
+    Returns:
+        dict: a dict object representing a user with keys MSAD_USER_FIELDS
     """
     r = {}
     lines = resultTxt.split("\n")
