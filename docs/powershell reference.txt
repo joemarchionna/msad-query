@@ -1,0 +1,17 @@
+PS C:\Users\jdoe> Get-ADUser -Identity jdoe -Server dc66
+
+
+DistinguishedName : CN=John Doe,OU=Users,OU=Company,DC=corp,DC=local
+Enabled           : True
+GivenName         : John
+Name              : John Doe
+ObjectClass       : user
+ObjectGUID        : 54c6640e-a597-45ad-974e-170d53afbb1a
+SamAccountName    : jdoe
+SID               : S-1-5-21-3691830899-5239577749-90497688-2222
+Surname           : Doe
+UserPrincipalName : jdoe@company.com
+
+
+
+PS C:\Users\jdoe>

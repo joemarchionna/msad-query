@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026 02 25
+### Fixed
+- powershell doc string
+### Added
+- powershell reference response doc
+### Changed
+- manifest.in
+
 ## [1.1.0] - 2026 02 25
 ### Changed
 - extended method doc strings
